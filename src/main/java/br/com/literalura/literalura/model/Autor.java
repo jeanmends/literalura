@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "autores")
@@ -88,5 +89,17 @@ public class Autor {
     @Override
     public String toString() {
         return  autor;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Autor autor1)) return false;
+        return Objects.equals(getAutor(), autor1.getAutor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAutor());
     }
 }

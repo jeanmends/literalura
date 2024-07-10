@@ -58,6 +58,7 @@ public class Principal {
 
 
     private void salvarLivros(List<Livro> livros){
+
         livros.forEach(livroRepository::save);
     }
     private void getDadosLivro(){
@@ -102,7 +103,8 @@ public class Principal {
     }
 
     private void mostrarAtuores() {
-        List<Livro> livros = livroRepository.findAll();
+       List<Livro> livros = livroRepository.findAll();
+
         if (livros.isEmpty()) {
             System.out.println("Nenhum autor registrado.");
         } else {
@@ -111,6 +113,10 @@ public class Principal {
                     .distinct()
                     .forEach(autor -> System.out.println(autor.getAutor()));
         }
+
+
+
+
     }
 
 }

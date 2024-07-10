@@ -106,7 +106,6 @@ public class Livro {
         return "Título: " + titulo + "\n" +
                 "Autor: " + autor + "\n" +
                 "Idioma: " + idioma + "\n" +
-                "Downloads: " + numeroDownloads + "\n" +
-                "----------------------------------------";
+                "Downloads: " + numeroDownloads + "\n";
     }
 }
